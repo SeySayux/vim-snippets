@@ -125,13 +125,11 @@ snippet fori
 	for(unsigned ${2:i} = 0; $2 < ${1:count}; ${3:++}$2) {
 		${4}
 	}${0}
-
 # foreach
 snippet fore
 	for(${1:auto &&} ${2:i} : ${3:container}) {
 		${4}
 	}${0}
-
 # iterator
 snippet iter
 	for(${1:std::vector}<${2:type}>::${3:const_iterator} ${4:it} = ${5:container}.begin(); $4 != $5.end(); ++$4) {
