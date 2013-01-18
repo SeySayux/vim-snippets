@@ -1,6 +1,6 @@
 # xml declaration
 snippet xml
-	<?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="utf-8"?>
 # tag
 snippet t
 	<${1:}>
@@ -9,4 +9,9 @@ snippet t
 # inline tag
 snippet ti
 	<${1:}>${2}</$1>
-
+# comment
+snippet <!
+	<!-- ${1} -->${2}
+# stylesheet
+snippet stylesheet
+	<?xml-stylesheet type="text/xsl" href="${1:`Filename("$1.xsl")`}"?>${2}
