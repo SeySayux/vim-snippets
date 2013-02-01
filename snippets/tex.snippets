@@ -231,11 +231,11 @@ snippet ft \footnote
 	\footnote{${0:${VISUAL:text}}}
 snippet fig figure environment (includegraphics)
 	\begin{figure}
-	\begin{center}
-		\includegraphics[scale=${1}]{Figures/${2}}
-	\end{center}
-	\caption{${3}}
-	\label{fig:${4}}
+	  \begin{center}
+	    \includegraphics[${1}]{${2}}
+	  \end{center}
+	  \caption{${3}}
+	  \label{fig:${4}}
 	\end{figure}
 	${0}
 snippet tikz figure environment (tikzpicture)
