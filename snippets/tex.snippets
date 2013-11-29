@@ -250,6 +250,7 @@ snippet tikz figure environment (tikzpicture)
 	\end{figure}
 	${0}
 #math
+<<<<<<< HEAD
 snippet stackrel \stackrel{}{}
 	\stackrel{${1:above}}{${2:below}} ${0}
 snippet frac \frac{}{}
@@ -315,3 +316,21 @@ snippet urlc
 	\url{`@+`} ${0}
 snippet hrefc
 	\href{`@+`}{${1}} ${0}
+=======
+snippet stackrel
+	\stackrel{${1:above}}{${2:below}} ${3}
+snippet frac
+	\frac{${1:num}}{${2:denom}}
+snippet sum
+	\sum^{${1:n}}_{${2:i=1}}{${3}}
+#misc
+snippet si
+	\SI{${1}}{${2}}
+snippet img
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{${1:image}}
+	\caption{${2}}
+	\label{fig:${1}}
+	\end{figure}
+>>>>>>> Lots of snippets.
