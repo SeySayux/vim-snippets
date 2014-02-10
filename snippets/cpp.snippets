@@ -100,7 +100,13 @@ snippet ns
 ## Input/Output
 # std::cout
 snippet cout
-	std::cout << ${1} << std::endl;
+	std::cout << ${1} << std::endl;${2}
+# std::cerr
+snippet cerr
+	std::cerr << ${1} << std::endl;${2}
+# std::clog
+snippet clog
+	std::clog << ${1} << std::endl;${2}
 # std::cin
 snippet cin
 	std::cin >> ${1};
