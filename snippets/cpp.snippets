@@ -156,7 +156,7 @@ snippet ld
 snippet lld
 	[${1}](${2}){
 		${3}
-	}${0}
+	}${4}
 
 # Author
 snippet author
@@ -165,13 +165,33 @@ snippet author
 	 */
 	
 	${0}
+
+## Override C snippets
 # main
-snippet main
+snippet! main
 	int main(int argc, const char *argv[]) {
 		${0}
 	}
-# main (empty)
-snippet mainn
+snippet! mainn
 	int main() {
 		${0}
 	}
+snippet! inc
+	#include <iostream>${2}
+# #include "..."
+snippet! Inc
+	#include "${1:`Filename("$1.hpp")`}"${2}
+# header include guard
+snippet! once
+	#ifndef ${1:`toupper(Filename('$1_HPP_', 'UNTITLED_HPP_'))`}
+	#define $1
+
+	${2}
+
+	#endif /* $1 */
+# Google test
+snippet test
+	TEST_F(${1:`Filename('$1', 'Test')`}, test${2:Something}) {
+		${3}
+	}
+
