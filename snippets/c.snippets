@@ -16,8 +16,12 @@ snippet mainn
 # #include <...>
 snippet inc
 	#include <${1:stdio}.h>
+snippet #inc
+	#include <${1:stdio}.h>
 # #include "..."
 snippet Inc
+	#include "${1:`vim_snippets#Filename("$1.h")`}"
+snippet #Inc
 	#include "${1:`vim_snippets#Filename("$1.h")`}"
 # ifndef...define...endif
 snippet ndef
@@ -305,7 +309,7 @@ snippet author
 	 * Author: Frank Erens
 	 */
 
-
+	${0}
 snippet uhauthor
 	/*
 	 * ${1:one line to give the program's name and a brief description}

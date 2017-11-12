@@ -158,14 +158,6 @@ snippet lld
 		${3}
 	}${4}
 
-# Author
-snippet author
-	/*
-	 * Author: Frank Erens
-	 */
-	
-	${0}
-
 ## Override C snippets
 # main
 snippet! main
@@ -176,10 +168,15 @@ snippet! mainn
 	int main() {
 		${0}
 	}
+# #include <...>
 snippet! inc
+	#include <${1:iostream}>${2}
+snippet! #inc
 	#include <${1:iostream}>${2}
 # #include "..."
 snippet! Inc
+	#include "${1:`Filename("$1.hpp")`}"${2}
+snippet! #Inc
 	#include "${1:`Filename("$1.hpp")`}"${2}
 # header include guard
 snippet! once
